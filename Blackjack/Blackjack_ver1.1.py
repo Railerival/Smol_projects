@@ -192,7 +192,6 @@ def decision(deck_copy,dealer_cards,player_cards) -> None:
 def playagain(deck_copy,dealer_cards,player_cards)->None:
     dealer_cards.clear()
     player_cards.clear()
-    deck_copy = []
     deck_copy = deck.copy()
     x=input("do you want to play again?(y)").lower()
     if x == 'y':
