@@ -1,4 +1,11 @@
-import bext
+import bext, random
 
-bext.fg("black")
-bext.title("DvD")
+width, height = bext.size()
+
+try:
+    while True:
+        bext.fg('yellow')
+        bext.bg('blue')
+        print('DvD')
+except KeyboardInterrupt:
+    pass

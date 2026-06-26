@@ -24,7 +24,7 @@ bitmap = """
 message = input('> ')
 if message == '':
   sys.exit()
-for i in bitmap:
-  for j in message:
-    bitmap = bitmap.replace("*",j,count = 1)
+for i in range(len(bitmap)):
+  j = message[i % len(message)]
+  bitmap = bitmap.replace("*",j,count = 1)
 print(bitmap)
