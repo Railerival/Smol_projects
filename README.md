@@ -1,7 +1,8 @@
 # My projects Repo
-Author-Railerival
-About-A repo for smol projects made by me
-structure of the repo:
+**Author** - Railerival  
+**About** - A repo for smol projects made by me.   
+made from the projects mentioned in the book [The big book of small python projects](https://inventwithpython.com/bigbookpython/) and i have not looked at the solutions while building this.  
+### **Structure of the repo**:
 ```
 projects/
    ├──smol_projects/
@@ -14,4 +15,13 @@ projects/
    └──README.md/
 ```
 **the earlier version of any project is a mistake i made or a lesser efficient solution.**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+
+## Attribution
+
+If you use this project, attribution is appreciated but not required. A mention in your README, documentation, or credits would be greatly appreciated.
+
 
