@@ -2,6 +2,9 @@
 **Author** - Railerival  
 **About** - A repo for smol projects made by me.   
 made from the projects mentioned in the book [The big book of small python projects](https://inventwithpython.com/bigbookpython/) and i have not looked at the solutions while building this.  
+
+**the slots_machine project wasn't in the book**
+
 ### **Structure of the repo**:
 ```
 projects/
@@ -9,9 +12,12 @@ projects/
    │    ├──bagels
    │    ├──bitmap_message
    │    ├──blackjack
-   │    ├──bouncing_dvd_logo
+   │    ├──bouncing_dvd_logo(on hold)
    │    ├──caeser_cipher
-   │    └──caeser_hacker
+   │    ├──caeser_hacker
+   │    ├──pig_latin
+   │    ├──slots_machine(on testing)
+   │    └──vignere_cipher(on development)
    └──README.md/
 ```
 **the earlier version of any project is a mistake i made or a lesser efficient solution.**

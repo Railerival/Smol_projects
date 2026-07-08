@@ -22,6 +22,9 @@ user_key = input("""Please specify the key to use.
 It can be a word or any combination of letters:\n""").lower()
 
 if eord != "e" or "d":
+    print("u can only encrypt or decrypt")
+    sys.exit()
+else:
     if user_key.isalpha():
         if eord == "e":
             msg = input("enter the message to encrypt:\n")
@@ -44,6 +47,3 @@ if eord != "e" or "d":
     else:
         print("key can only be a word or combination of letters")
         sys.exit()
-else:
-    print("u can only encrypt or decrypt")
-    sys.exit()
