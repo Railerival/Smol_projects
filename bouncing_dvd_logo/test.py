@@ -1,7 +1,8 @@
-import bext
-import time
-from bext_upgrade import Terminal 
-
-terminal = Terminal("hello")
-terminal.print_at_xy("hello",30, 5)
-time.sleep(2)
+string = "hi"
+while True:
+  try:
+    print(string + 3)
+    break
+  except TypeError:
+    print("except block")
+print("hi")
