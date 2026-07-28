@@ -56,7 +56,7 @@ class Card:
 
     def __str__(self) -> str:
         """returns the str version of the object"""
-        return f'{self.rank} of {self.suit}'
+        return f"{self.rank} of {self.suit}"
     
     def __repr__(self) -> str:
         """returns the display of the object for the developer"""
@@ -75,7 +75,7 @@ class Deck:
         """calls the card_creation method to create the deck"""
         self.deck= self.card_creation()
 
-    def card_creation(self) -> Card:
+    def card_creation(self) -> list[Card]:
         """creates the deck"""
         self.cards = []
         for suit in self.SUITS:
