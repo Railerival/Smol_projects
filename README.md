@@ -12,11 +12,11 @@ projects/
    │    ├──bagels
    │    ├──bitmap_message
    │    ├──blackjack
-   │    ├──bouncing_dvd_logo(on hold)
+   │    ├──bouncing_dvd_logo
    │    ├──caeser_cipher
    │    ├──caeser_hacker
    │    ├──pig_latin
-   │    ├──slots_machine(on testing)
+   │    ├──slots_machine
    │    └──vignere_cipher(on development)
    └──README.md/
 ```
