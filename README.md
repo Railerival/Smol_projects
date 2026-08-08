@@ -20,7 +20,9 @@ projects/
    │    └──vignere_cipher(on development)
    └──README.md/
 ```
-**the earlier version of any project is a mistake i made or a lesser efficient solution.**
+**the earlier version of any project is a mistake i made or a lesser efficient solution.**  
+
+and there are some codes i feel like could have been better but the whole idea of making these projects was to learn
 
 ## License
 
