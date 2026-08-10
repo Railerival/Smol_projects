@@ -14,6 +14,8 @@ def sum_hand(hand) -> int:
         rank = card.rank
         if rank == "A":
             sum_ranks = sum_ranks + 11
+            if sum_ranks > 21:
+                sum_ranks -= 10
         elif rank in "JQK":
             sum_ranks = sum_ranks + 10
         else:
