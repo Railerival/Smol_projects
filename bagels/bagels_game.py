@@ -23,7 +23,6 @@ def randy()->None:
    random_integer = random.randint(0, 999)
    random_number = f"{random_integer:0>3}"
         
-
 def right_guess(number)->bool:
     """checks if user guess is right"""
     return random_number == number
