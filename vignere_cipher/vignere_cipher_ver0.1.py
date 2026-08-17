@@ -1,49 +1,74 @@
 import string
 import sys
 
-full_key = []
 alphabet_list = []
-output = []
-key_flag = 0
-
+conversion_list = []
+output_list = []
 lower_case_string = string.ascii_lowercase
+character_count = 0
+
+def get_number(letter):
+    if not letter.isalpha():
+        return letter
+    index = alphabet_list.index(letter)
+    return index
+    
+def get_alphabet(number):
+    return alphabet_list[number]
+
 for letter in lower_case_string:
     alphabet_list.append(letter)
-numbers_list = []
-for number in range(0,26):
-    numbers_list.append(number)
 
-
-eord = input("""The Vigenère cipher is a polyalphabetic substitution cipher that was
+function = input("""The Vigenère cipher is a polyalphabetic substitution cipher that was
 powerful enough to remain unbroken for centuries.
-Do you want to (e)ncrypt or (d)ecrypt?:\n""").lower()
+Do you want to (e)ncrypt or (d)ecrypt?:""").lower()
 
-user_key = input("""Please specify the key to use.
-It can be a word or any combination of letters:\n""").lower()
-
-if eord != "e" or "d":
-    print("u can only encrypt or decrypt")
+if not(function == "e" or function == "d"):
+    print("Only encryption and decryption possible")
     sys.exit()
-else:
-    if user_key.isalpha():
-        if eord == "e":
-            msg = input("enter the message to encrypt:\n")
-            for letter in user_key:
-                key = alphabet_list.index(letter)
-                full_key.append(key)
-            for letter in msg:
-                if letter.isalpha():
-                    power_of_letter = alphabet_list.index(letter) #power of letter is basically index of the letter in alphabet_list
-                else:
-                    power_of_letter = 0
-                msg_letter_index = msg.index(letter)
-            for key in full_key:
-                output.append(alphabet_list[((power_of_letter+key)%26)])
-            output = "".join(output)
-            print(f"Encrypted message is:\n{output}")
 
-        elif eord == "d":
-            code = input("enter the code to decrypt:\n")
-    else:
-        print("key can only be a word or combination of letters")
-        sys.exit()
+key = input("""Please specify the key to use.
+It can be a word or any combination of letters:""").lower()
+
+if not key.isalpha():
+    print("Only alphabet keys are allowed")
+    sys.exit()
+
+key_length = len(key)
+
+if function == "e":
+    message = input("Enter the message to encrypt:").lower()
+
+    for letter in message:
+        msg_number = get_number(letter)
+        conversion_list.append(msg_number)
+
+    for msg_character_index, msg_character in enumerate(conversion_list):
+        if isinstance(msg_character, int):
+            key_index = ((msg_character_index - character_count) % key_length)
+            key_number = get_number(key[key_index])
+            encrypted_number = ((key_number + msg_character) % 26)
+            output_list.append(get_alphabet(encrypted_number))
+        else:
+            character_count += 1
+            output_list.append(msg_character)
+else:
+    cipher_text = input("Enter the message to encrypt:").lower()
+
+    for letter in cipher_text:
+        cipher_number = get_number(letter)
+        conversion_list.append(cipher_number)
+    for cipher_character_index, cipher_character in enumerate(conversion_list):
+        if isinstance(cipher_character, int):
+            key_index = ((cipher_character_index - character_count) % key_length)
+            key_number = get_number(key[key_index])
+            encrypted_number = ((cipher_character - key_number) % 26)
+            output_list.append(get_alphabet(encrypted_number))
+        else:
+            character_count += 1
+            output_list.append(cipher_character)
+
+
+
+print("".join(output_list).upper())
+        
